@@ -15,15 +15,21 @@
  */
 // write your code here
 
+func frozen() {
+    print("Let it go!")
+}
 
-
-
+frozen()
 
 /*: question2
  ### 2. Write a function named `frozenAgain` that takes no arguments. Declare a constant in the body of the function, and assign it the value "Let it go!". Then print it to the console.
  */
 // write your code here
-
+func frozenAgain() {
+    let frozen = "Let it go!"
+    print(frozen)
+}
+frozenAgain()
 
 
 
@@ -32,6 +38,11 @@
  */
 // write your code here
 
+func charactersName(name: String) {
+    print("My favore character is \(name).")
+}
+charactersName(name: "Raekwon The Chef")
+
 
 
 
@@ -39,7 +50,8 @@
  ### 4. Call the function you wrote in Question 3 using a constant you define. Then call it using a variable. Change the value of the variable, and call it again. What do you see in the console?
  */
 // write your code here
-
+var favoriteCharacterName = "Frodo"
+charactersName(name: favoriteCharacterName)
 
 
 
@@ -48,6 +60,11 @@
  */
 // write your code here
 
+func numberFunction(number: Int) {
+    print("I got \(number) problems but Swift ain't one")
+}
+numberFunction(number: 99)
+
 
 
 
@@ -55,9 +72,10 @@
  ### 6. Write a function that takes two arguments, the name of a band (a `String`) and a number (an `Int`). It should print the message "My #<number> favorite band is <band>." to the console.
  */
 // write your code here
-
-
-
+func bandFunc(bandName: String, number: Int) {
+    print("My #\(number) favorite band is \(bandName)")
+}
+bandFunc(bandName:"Jets", number: 1)
 
 /*: question7
  ### 7. The code below is broken. Can you identify which line has an error and fix it so that it works again?
@@ -66,7 +84,7 @@ func badFavoriteBand(bandName: String, position: Int) {
     print("My #\(position) favorite band is \(bandName).")
 }
 
-badFavoriteBand("The Beatles", 2)
+badFavoriteBand("The Beatles",position: 2)
 
 
 
@@ -74,11 +92,11 @@ badFavoriteBand("The Beatles", 2)
 /*: question8
  ### 8. This code is broken, too. Assume the call to the function is correct. What's broken about the function definition? Can you fix it?
  */
-func alsoBadFavoriteBand(bandName: String, position: String) {
+func alsoBadFavoriteBand(bandName: String, position: Int) {
     print("My #\(position) favorite band is \(bandName)")
 }
 
-alsoBadFavoriteBand("Blink-182", position: 42)
+print(alsoBadFavoriteBand("Blink-182", position: 42))
 
 
 
@@ -88,6 +106,10 @@ alsoBadFavoriteBand("Blink-182", position: 42)
  */
 // write your code here
 
+func madLib(charactersName: String, noun: String, preposition:String) {
+    print("To \(noun) and \(preposition), \(charactersName)!")
+}
+print (madLib("Kanye West",noun:"latin",preposition:"arrived"))
 
 
 
@@ -96,14 +118,17 @@ alsoBadFavoriteBand("Blink-182", position: 42)
  */
 // write your code here
 
-
-
+func buzz()-> String {
+    return "Buzz lightyear to the rescue!"
+}
 
 /*: question11
  ### 11. Create a function that takes no arguments and returns any number.
  */
 // write your code here
-
+func anyNumber() -> Int {
+    return 17
+}
 
 
 
@@ -111,6 +136,11 @@ alsoBadFavoriteBand("Blink-182", position: 42)
  ### 12. Create a function that takes in a characters name. This function will return back a `String` as follows: "To infinity and beyond, <character name>!". The character name should be returned uppercased.
  */
 // write your code here
+func thing(name: String)-> String {
+    return "To infinity and beyond, \(name)!"
+}
+let thingName = "buzz lightyear"
+print (thing(thingName.uppercased()))
 
 
 
